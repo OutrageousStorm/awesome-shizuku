@@ -1,27 +1,32 @@
-# Awesome Shizuku
+# Awesome Shizuku Apps
 
-Apps that use Shizuku to grant privileges without rooting.
+Curated list of must-have Shizuku-powered apps for Android power users.
 
-## What is Shizuku?
+## Permission & Privacy Management
 
-Shizuku is an Android app that grants **ADB shell access** to other apps via IPC. No root needed. Works on Android 6+.
+- **App Manager** — Full control over apps: permissions, components, operations, backup
+- **Hide My AppList** (LSPosed) — Prevent apps from detecting which apps you have installed
+- **TrackerControl** — Block trackers system-wide without root
 
-**GitHub:** https://github.com/RikkaApps/Shizuku
+## System Control
 
-## Apps
+- **Tasker** (+ Shizuku) — Unlimited automation and system control
+- **NetGuard** — Per-app firewall and network control
+- **Greenify** — Aggressive backgrounding of apps
 
-| App | Category | Link |
-|-----|----------|------|
-| **App Manager** | System | [GitHub](https://github.com/muntashirakon/AppManager) |
-| **Always On AMOLED** | UI | [GitHub](https://github.com/BasharatAliKing/Always-On-AMOLED) |
-| **NetGuard** | Firewall | [F-Droid](https://f-droid.org/packages/eu.faircode.netguard/) |
-| **MacroDroid** | Automation | [Play Store](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) |
+## Advanced Features
 
-## Install
+- **Hail** — Disable/hide/suspend apps without uninstalling
+- **Island** — Parallel space for app cloning and isolation
+- **Activity Launcher** — Launch hidden activities and test ADB commands
+- **ADB WiFi** — Enable wireless ADB from within the app
 
-1. Download Shizuku from [GitHub](https://github.com/RikkaApps/Shizuku/releases)
-2. Enable USB Debugging
-3. Run: `adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh`
-4. Grant permission in app
+## Development & Debugging
 
-*See [Shizuku docs](https://shizuku.rikka.app) for full guide*
+- **Logcat** — Read system logs in real-time
+- **Permission Listener** — See which apps request what permissions
+- **Packet Capture** (PCAPdroid) — Network traffic inspection
+
+---
+
+*See also: [android-privacy-hardener](https://github.com/OutrageousStorm/android-privacy-hardener)*
