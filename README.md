@@ -1,47 +1,41 @@
 # Awesome Shizuku
 
-Curated list of the best Shizuku-powered Android apps. [What is Shizuku?](https://shizuku.rikka.app)
+Curated collection of amazing Shizuku-powered Android apps. No root needed.
 
-Shizuku allows apps to access ADB-level APIs **without root** — you grant permission once via the Shizuku UI.
+## What is Shizuku?
 
-## Installation
+Shizuku grants ADB-level permissions to apps without root. Set it up once via USB debugging, then apps can do things normally requiring root — all without exposing your device to root-level code.
 
-1. Install [Shizuku Manager](https://github.com/RikkaApps/Shizuku) from Play Store or F-Droid
-2. (Easiest) Use wireless ADB: Settings → Developer Options → Wireless Debugging
-3. Or USB: `adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/files/start.sh`
-4. Grant Shizuku permission to each app that requests it
+## System Control
 
-## Featured Apps
+- **App Manager** ⭐ — Full app control, uninstall, disable, permissions, components — the most powerful
+- **Hail** — Freeze/suspend/uninstall apps without uninstalling
+- **Settings Storage** — Access hidden system settings normally locked away
+- **NetGuard** — Network firewall with Shizuku elevated logging
 
-### System & Management
-- **[App Manager](https://muntashirakon.github.io/AppManager/)** — Full app control: uninstall, backup, permission audit
-- **[Shelter](https://exyed.github.io/Shelter/)** — Work profile isolation — freeze/unfreeze apps instantly
-- **[BusyBox Installer](https://play.google.com/store/apps/details?id=ru.meefik.busybox)** — Linux utilities on Android
-- **[Storage Scopes](https://play.google.com/store/apps/details?id=com.xayah.spacein)** — Granular storage permissions
+## Battery & Power
 
-### Battery & Performance
-- **[AccA](https://github.com/MatteCarra/AccA)** — Charging limits, temperature control, diagnostics
-- **[System Tuner Pro](https://play.google.com/store/apps/details?id=rs.Inthehand.Frequency)** — CPU/GPU frequency scaling
+- **AccA** — Charging controller, set limits, protect battery health
+- **Thermal Throttle Manager** — Control CPU thermal thresholds
+- **Battery Notification** — Real-time battery stats overlay
 
-### Network & Privacy
-- **[NetGuard](https://netguard.me)** — Per-app VPN firewall (full network blocking per-app)
-- **[TrackerControl](https://trackercontrol.org)** — Monitor and block tracker servers
-- **[DNS Changer](https://play.google.com/store/apps/details?id=com.frostnerd.smokescreen)** — System-wide encrypted DNS
+## Privacy & Security
 
-### Customization
-- **[KWGT](https://play.google.com/store/apps/details?id=org.kustom.widget)** — Powerful widget builder with system data access
+- **App Isolator** — Run untrusted apps in isolated containers
+- **Intent Firewall** — Monitor and block Intents
+- **Logcat Reader** — View system logs in real time
 
-## Why Shizuku Instead of Root?
+## Utilities
 
-| Feature | Root | Shizuku |
-|---------|------|---------|
-| Requires bootloader unlock | Yes | No |
-| Survives updates | Sometimes | Yes |
-| Easier to disable | No | Yes (revoke in Settings) |
-| Can install system apps | Yes | Via App Manager |
-| Less invasive | No | Yes |
+- **MiXplorer** — Best file manager, integrates with Shizuku
+- **Tasker** — Automation framework, Shizuku integration for system control
+- **Shortcut Maker** — Create app shortcuts, works better with Shizuku
+
+## Development
+
+- **Shizuku Sample** — Official sample app, great starting point
+- **LSPosed** — Xposed framework, works via Shizuku or KernelSU
 
 ---
 
-*Last updated: 2026-04-18*
-**Maintained by [OutrageousStorm](https://github.com/OutrageousStorm)**
+See also: [awesome-android-customization](https://github.com/OutrageousStorm/awesome-android-customization)
