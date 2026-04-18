@@ -1,85 +1,47 @@
 # Awesome Shizuku
 
-Curated list of the best Shizuku-powered Android apps — elevated privileges without root.
+Curated list of the best Shizuku-powered Android apps. [What is Shizuku?](https://shizuku.rikka.app)
 
-## What is Shizuku?
+Shizuku allows apps to access ADB-level APIs **without root** — you grant permission once via the Shizuku UI.
 
-Shizuku is a service that uses ADB (Android Debug Bridge) grants to give apps elevated permissions without requiring traditional root. Apps can request Shizuku access and get shell-level privileges for system operations.
+## Installation
 
-**Official site:** https://shizuku.rikka.app
+1. Install [Shizuku Manager](https://github.com/RikkaApps/Shizuku) from Play Store or F-Droid
+2. (Easiest) Use wireless ADB: Settings → Developer Options → Wireless Debugging
+3. Or USB: `adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/files/start.sh`
+4. Grant Shizuku permission to each app that requests it
 
----
+## Featured Apps
 
-## System Administration
+### System & Management
+- **[App Manager](https://muntashirakon.github.io/AppManager/)** — Full app control: uninstall, backup, permission audit
+- **[Shelter](https://exyed.github.io/Shelter/)** — Work profile isolation — freeze/unfreeze apps instantly
+- **[BusyBox Installer](https://play.google.com/store/apps/details?id=ru.meefik.busybox)** — Linux utilities on Android
+- **[Storage Scopes](https://play.google.com/store/apps/details?id=com.xayah.spacein)** — Granular storage permissions
 
-| App | What it does | GitHub |
-|-----|-------------|--------|
-| **App Manager** | Full app control — uninstall, permissions, component management | [MuntashirAkon](https://github.com/MuntashirAkon/AppManager) |
-| **Bloatware Remover** | Safe debloat with rollback | [Gizmondian](https://github.com/Gizmondian/bloatware-remover) |
-| **Button Mapper** | Remap physical buttons without root | [sds100](https://github.com/sds100/KeyMapper) |
-| **Tasker** | Advanced automation via Shizuku | [joaomgcd](https://tasker.joaoapps.com) |
-| **Shelter** | Profile isolation + work profile management | [evilkost](https://github.com/evilkost/Shelter) |
+### Battery & Performance
+- **[AccA](https://github.com/MatteCarra/AccA)** — Charging limits, temperature control, diagnostics
+- **[System Tuner Pro](https://play.google.com/store/apps/details?id=rs.Inthehand.Frequency)** — CPU/GPU frequency scaling
 
-## Privacy & Security
+### Network & Privacy
+- **[NetGuard](https://netguard.me)** — Per-app VPN firewall (full network blocking per-app)
+- **[TrackerControl](https://trackercontrol.org)** — Monitor and block tracker servers
+- **[DNS Changer](https://play.google.com/store/apps/details?id=com.frostnerd.smokescreen)** — System-wide encrypted DNS
 
-| App | What it does |
-|-----|-------------|
-| **NetGuard** | Per-app firewall and traffic monitor |
-| **TrackerControl** | Block trackers at network level |
-| **PCAPdroid** | Packet capture and analysis |
-| **Universal Android Debloater** | Mass app removal with safety checks |
+### Customization
+- **[KWGT](https://play.google.com/store/apps/details?id=org.kustom.widget)** — Powerful widget builder with system data access
 
-## Device Control
+## Why Shizuku Instead of Root?
 
-| App | What it does |
-|-----|-------------|
-| **Macro Recorder** | Record and replay touch sequences |
-| **AOD Suite** | Always-On Display customization |
-| **SamFw Downloader** | Download Samsung firmware OTA |
-| **Clipboard Manager** | Clipboard history and sync |
-
-## Development Tools
-
-| App | What it does |
-|-----|-------------|
-| **Logcat** | System logs with filtering |
-| **Accessibility Inspector** | Debug accessibility services |
-| **DatabaseInspector** | Browse device databases |
+| Feature | Root | Shizuku |
+|---------|------|---------|
+| Requires bootloader unlock | Yes | No |
+| Survives updates | Sometimes | Yes |
+| Easier to disable | No | Yes (revoke in Settings) |
+| Can install system apps | Yes | Via App Manager |
+| Less invasive | No | Yes |
 
 ---
 
-## Installing Apps with Shizuku
-
-1. **Setup Shizuku:**
-   - Install Shizuku app from F-Droid or Play Store
-   - On first run, connect via USB ADB: `adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh`
-   - Or enable Wireless Debugging (Android 11+) and pair directly
-
-2. **Grant Shizuku access:**
-   - Open app → Settings → Shizuku → enable
-   - Shizuku Manager app will show a prompt
-   - Tap to grant
-
-3. **Result:** App gets shell-level access without the security risks of traditional root
-
----
-
-## Why Shizuku instead of root?
-
-| Feature | Shizuku | Magisk/Root |
-|---------|---------|------------|
-| Setup | ADB once, then wireless | Complex, risky |
-| Detection | Very hidden | Detectable by apps |
-| Safety | Can be revoked per-app | All-or-nothing |
-| Updates | Survives OTA | Need to re-patch |
-| Stability | Very stable | Can break things |
-
----
-
-## Resources
-
-- **Official docs:** https://shizuku.rikka.app
-- **GitHub:** https://github.com/RikkaApps/Shizuku
-- **XDA discussion:** https://forum.xda-developers.com/t/shizuku.4213519/
-
-*Maintained by OutrageousStorm*
+*Last updated: 2026-04-18*
+**Maintained by [OutrageousStorm](https://github.com/OutrageousStorm)**
