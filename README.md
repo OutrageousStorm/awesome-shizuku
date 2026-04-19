@@ -1,70 +1,64 @@
-# 📋 Awesome Shizuku
+# 🚀 Awesome Shizuku
 
-Curated list of the best Shizuku-powered Android apps — no root required.
+Curated list of the best apps that leverage Shizuku — the ADB root alternative.
 
-**What is Shizuku?** A tool that grants apps ADB-level access without root. Start once via USB or wireless ADB, then Shizuku persists.
+**What is Shizuku?** A bridge to Android system APIs that normally require root. Started once via ADB or wireless debugging, any app can request Shizuku permission for elevated access without true root.
 
 ---
 
-## App Management
+## 🔑 Best Shizuku Apps
 
-| App | What it does | Link |
+### System Control & Tweaking
+| App | Description | Link |
 |-----|-------------|------|
-| **App Manager** | Full app control — permissions, ops, components, backup, launch shortcuts | [GitHub](https://github.com/muntashirakon/AppManager) |
-| **Hail** | Freeze/hide/suspend apps without uninstalling | [GitHub](https://github.com/aistra0528/Hail) |
-| **Shelter** | Work profile manager — isolate untrusted apps | [GitHub](https://github.com/PeterCxy/Shelter) |
-| **ICH** | Install APKs directly (ICC integrated chipset) | [GitHub](https://github.com/Xposed-Modules-Repo/com.isssc.ich) |
+| **App Manager** | Full control over apps — permissions, ops, components | [GitHub](https://github.com/MuntashirAkon/AppManager) |
+| **Blocker** | Block apps, activities, services at system level | [GitHub](https://github.com/blokadaorg/blocker) |
+| **Shelter** | Create isolated work profile | [GitHub](https://github.com/e1025298/Shelter) |
+| **Warden** | Monitor & control app requests | [GitHub](https://github.com/theavege/warden) |
+| **System Updater** | Flash OTA updates from file | [XDA](https://forum.xda-developers.com) |
 
-## System Tweaks
+### Privacy & Security
+| App | Description | Link |
+|-----|-------------|------|
+| **Revoker** | Bulk-revoke permissions via Shizuku | [GitHub](https://github.com/zyx930/Revoker) |
+| **Blocker** | Block network requests system-wide | [GitHub](https://github.com/blokada/blokada) |
+| **NetGuard** | No-root firewall via Shizuku | [GitHub](https://github.com/M66B/NetGuard) |
+| **TrackerControl** | Block trackers in all apps | [GitHub](https://github.com/TrackerControl/tracker-control-android) |
 
-| App | What it does |
-|-----|-------------|
-| **Settings Database Editor** | Raw access to secure/global/system settings |
-| **Setedit** | Edit system settings with UI |
-| **ScreenFilter** | Blue light filter without overlay mode |
-| **Volume Extend** | Increase volume slider steps beyond default |
+### Customization
+| App | Description | Link |
+|-----|-------------|------|
+| **Iconify** | System-wide icon/UI theming | [GitHub](https://github.com/Mahmud0808/Iconify) |
+| **Always On AMOLED** | Custom always-on-display | [Play Store](https://play.google.com/store/apps/details?id=com.tomer.alwaysonamoled) |
+| **StatusBar Customization** | Tweak status bar | Various |
 
-## Hardware Control
-
-| App | What it does |
-|-----|-------------|
-| **Thermal Monitor** | Read real-time CPU/GPU temps |
-| **CPU Info** | CPU freq, governor, thermal info live |
-| **Brightness Controller** | Per-app brightness levels |
-| **Screen Rotate** | Force rotation per-app |
-| **Torch** — Flashlight | Torch control via Shizuku |
-
-## Accessibility
-
-| App | What it does |
-|-----|-------------|
-| **Input Method Manager** | Switch keyboards programmatically |
-| **Permission Cleaner** | Revoke permissions in bulk |
-| **App Hide** | Hide apps from launcher |
-| **Block2** | System-wide blocklists (Shizuku mode) |
-
-## Advanced / Developer
-
-| App | What it does |
-|-----|-------------|
-| **PCAPdroid** | Network traffic capture (Shizuku mode) |
-| **Packet Capture** | Packet analysis tool |
-| **Mobile Netstats** | Real-time network stats per-app |
-| **Intent Interceptor** | Log & modify intents |
+### Development & Debugging
+| App | Description | Link |
+|-----|-------------|------|
+| **AppWatcher** | Monitor app updates & version changes | [GitHub](https://github.com/jokermonn/AppWatcher) |
+| **Logcat Reader** | Full system logcat viewer | [GitHub](https://github.com/MuntashirAkon/LogcatReader) |
 
 ---
 
-**Install Shizuku:**
-1. https://shizuku.rikka.app
-2. Follow setup guide (USB debugging or wireless)
-3. Grant app permission when prompted
+## How to Set Up Shizuku
 
-**Recommended first apps:**
-- App Manager (essential)
-- Hail (freeze apps)
-- Shelter (isolate apps)
-- PCAPdroid (network analysis)
+### Method 1: Wireless Debugging (Android 11+, easiest)
+```bash
+# Enable wireless debugging on device
+# Connect via:
+adb pair <ip>:<pair_port> <pair_code>
+adb connect <ip>:<port>
+
+# Open Shizuku, it will detect the connection
+```
+
+### Method 2: USB Debugging
+```bash
+# Connect device via USB
+adb shell sh /sdcard/shizuku_starter.sh
+# Run this once, then apps can use Shizuku
+```
 
 ---
 
-*Maintained by [OutrageousStorm](https://github.com/OutrageousStorm)*
+*Want to add an app? Submit a PR!*
