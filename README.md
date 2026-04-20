@@ -1,64 +1,47 @@
-# 🚀 Awesome Shizuku
+# Awesome Shizuku Apps
 
-Curated list of the best apps that leverage Shizuku — the ADB root alternative.
+Curated apps that use Shizuku for elevated operations without root.
 
-**What is Shizuku?** A bridge to Android system APIs that normally require root. Started once via ADB or wireless debugging, any app can request Shizuku permission for elevated access without true root.
+## What is Shizuku?
 
----
+Shizuku lets apps run ADB commands without root. You grant permission once, then any Shizuku-enabled app can:
+- Revoke/grant permissions
+- Disable system apps (without uninstalling)
+- Manage device settings
+- Access system APIs
 
-## 🔑 Best Shizuku Apps
+## Apps
 
-### System Control & Tweaking
-| App | Description | Link |
-|-----|-------------|------|
-| **App Manager** | Full control over apps — permissions, ops, components | [GitHub](https://github.com/MuntashirAkon/AppManager) |
-| **Blocker** | Block apps, activities, services at system level | [GitHub](https://github.com/blokadaorg/blocker) |
-| **Shelter** | Create isolated work profile | [GitHub](https://github.com/e1025298/Shelter) |
-| **Warden** | Monitor & control app requests | [GitHub](https://github.com/theavege/warden) |
-| **System Updater** | Flash OTA updates from file | [XDA](https://forum.xda-developers.com) |
+### Utilities
 
-### Privacy & Security
-| App | Description | Link |
-|-----|-------------|------|
-| **Revoker** | Bulk-revoke permissions via Shizuku | [GitHub](https://github.com/zyx930/Revoker) |
-| **Blocker** | Block network requests system-wide | [GitHub](https://github.com/blokada/blokada) |
-| **NetGuard** | No-root firewall via Shizuku | [GitHub](https://github.com/M66B/NetGuard) |
-| **TrackerControl** | Block trackers in all apps | [GitHub](https://github.com/TrackerControl/tracker-control-android) |
+| App | Source | What it does | Stars |
+|-----|--------|-------------|-------|
+| **AppManager** | [GitHub](https://github.com/MuntashirAkon/AppManager) | Full app control — uninstall system apps, audit permissions, backup | ⭐⭐⭐⭐ |
+| **Hail** | [GitHub](https://github.com/aistra0528/Hail) | Hide/disable apps in bulk without uninstalling | ⭐⭐⭐ |
+| **Storage Scope** | [F-Droid](https://f-droid.org) | App-by-app storage access control (replace Android's scoped storage) | ⭐⭐⭐ |
+| **Permission Master** | F-Droid | Revoke system-level permissions easily | ⭐⭐ |
 
 ### Customization
-| App | Description | Link |
-|-----|-------------|------|
-| **Iconify** | System-wide icon/UI theming | [GitHub](https://github.com/Mahmud0808/Iconify) |
-| **Always On AMOLED** | Custom always-on-display | [Play Store](https://play.google.com/store/apps/details?id=com.tomer.alwaysonamoled) |
-| **StatusBar Customization** | Tweak status bar | Various |
 
-### Development & Debugging
-| App | Description | Link |
-|-----|-------------|------|
-| **AppWatcher** | Monitor app updates & version changes | [GitHub](https://github.com/jokermonn/AppWatcher) |
-| **Logcat Reader** | Full system logcat viewer | [GitHub](https://github.com/MuntashirAkon/LogcatReader) |
+| App | Source | What it does |
+|-----|--------|-------------|
+| **Iconify** | [GitHub](https://github.com/Mahmud0808/Iconify) | Full UI theming (icons, colors, fonts) | ⭐⭐⭐⭐ |
+| **FakeStore** | [GitHub](https://github.com/Szaki/FakeStore) | Fake Google Play Store for testing | ⭐⭐ |
 
----
+### Privacy
 
-## How to Set Up Shizuku
+| App | Source | What it does |
+|-----|--------|-------------|
+| **Revoker** | GitHub | Revoke dangerous permissions with one tap | ⭐⭐ |
+| **Blocker** | GitHub | Block apps from running in background | ⭐⭐ |
 
-### Method 1: Wireless Debugging (Android 11+, easiest)
-```bash
-# Enable wireless debugging on device
-# Connect via:
-adb pair <ip>:<pair_port> <pair_code>
-adb connect <ip>:<port>
+### Automation
 
-# Open Shizuku, it will detect the connection
-```
-
-### Method 2: USB Debugging
-```bash
-# Connect device via USB
-adb shell sh /sdcard/shizuku_starter.sh
-# Run this once, then apps can use Shizuku
-```
+| App | Source | What it does |
+|-----|--------|-------------|
+| **aod-suite** | [GitHub](https://github.com/OutrageousStorm/aod-suite) | Always-on Display customization via Shizuku | ⭐ |
+| **Finder** | [GitHub](https://github.com/Finder6/Finder) | Find and replace in ROM files | ⭐ |
 
 ---
 
-*Want to add an app? Submit a PR!*
+**Contributing:** Found a great Shizuku app? Open an issue or PR!
