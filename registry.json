@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Hide My AppList",
+    "repo": "https://github.com/Dr-TSNG/Hide-My-Applist",
+    "tags": [
+      "privacy"
+    ]
+  },
+  {
+    "name": "TrickyStore",
+    "repo": "https://github.com/5ec1cff/TrickyStore",
+    "tags": [
+      "banking",
+      "attestation"
+    ]
+  },
+  {
+    "name": "PlayIntegrityFix",
+    "repo": "https://github.com/chiteroman/PlayIntegrityFix",
+    "tags": [
+      "attestation"
+    ]
+  },
+  {
+    "name": "LSPosed",
+    "repo": "https://github.com/LSPosed/LSPosed",
+    "tags": [
+      "framework",
+      "zygisk"
+    ]
+  }
+]
